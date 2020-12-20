@@ -1,0 +1,25 @@
+{
+  "name": "JEST-ASERCIONES",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "jest:init":"jest --init",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbonavota/JEST-ASERCIONES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hbonavota/JEST-ASERCIONES/issues"
+  },
+  "homepage": "https://github.com/hbonavota/JEST-ASERCIONES#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
