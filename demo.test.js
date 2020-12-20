@@ -70,5 +70,36 @@ describe('Basic examples Aserciones', ()=>{
         })
     })
 
+    describe('Examples with .toBeClose()', ()=>{
+        /*En javascript el resultado de un decimal no es totalmente exacto, por eso usamos .toBeClose(), dado que (0.1 +0.2) ---> 0.30000000000000004
+        expect(0.2+0.1).toBe(0.3) --> falla 
+        .toBeClose(num, numeroDecimalesPrecision) resulve problema para comparar decimales inexactos
+        */
+        test('.toBeClose()',()=>{
+            const number = 0.30004;
+            expect(number).not.toBeCloseTo(0.3,5);
+            expect(number).toBeCloseTo(0.3,4)
+        })
+    })
+
+    describe('Examples .toBeDefined(), .toBeUndefined', ()=>{
+        test('Verificamos si la variable ya ha sido definida ',()=>{
+            let variable;
+            expect(variable).toBeUndefined();
+            expect(variable).not.toBeDefined();
+
+            variable= true;
+            expect(variable).toBeDefined();
+            expect(variable).not.toBeUndefined();
+        })
+    })
+
+    describe('Examples .toMatch(RegExp)',()=>{
+        test('con .toMarch comparamos string con RegExp',()=>{
+            let string = "Cadena a evaluar n12";
+            expect(string).toMatch(/^Cadena( a )?[a-z,A-Z,0-9, ]+/)
+
+        })      
+    })
     
 })
