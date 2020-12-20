@@ -98,7 +98,21 @@ describe('Basic examples Aserciones', ()=>{
         test('con .toMarch comparamos string con RegExp',()=>{
             let string = "Cadena a evaluar n12";
             expect(string).toMatch(/^Cadena( a )?[a-z,A-Z,0-9, ]+/)
-
+        })      
+    })
+    
+    describe('Examples .toHaveProperty()',()=>{
+        test('Comprobar que existe la clave indicada dentro de un objeto',()=>{
+            const obj = {
+                name: "Hernán",
+                age: 32
+            };
+            //toHaveProperty(claveDeValor)
+            expect(obj).toHaveProperty("name");
+            expect(obj).not.toHaveProperty("x");
+            //toHaveProperty(claveDeValor, ValorAsociado)
+            expect(obj).toHaveProperty("name","Hernán");
+            expect(obj).not.toHaveProperty("name","Juan");
         })      
     })
     
