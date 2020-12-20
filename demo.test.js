@@ -57,10 +57,16 @@ describe('Basic examples Aserciones', ()=>{
         /*Para comprar cantidades numéricas tenemos las funciones:
         .toBeGreaterThan() toBeGreaterThanOrEqual()
         .toBeLessThan() toBeLessThanOrEqual() */
-        test('Comparamos números con .toBeGreaterThan() y toBeGreaterThanOrEqual()', () =>{
+        test('Comparamos números con .toBeGreaterThan() toBeGreaterThanOrEqual()', () =>{
             const number = 100;
             expect(number).toBeGreaterThan(90);
             expect(number).toBeGreaterThanOrEqual(100);
+        })
+
+        test('.toBeLessThan() toBeLessThanOrEqual()', ()=>{
+            const number = 1000;
+            expect(number).toBeLessThan(1001);
+            expect(number).toBeLessThanOrEqual(1000);
         })
     })
 
